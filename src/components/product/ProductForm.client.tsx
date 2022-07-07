@@ -89,11 +89,11 @@ export function ProductForm() {
                   {name}
                 </Heading>
                 <div className="flex flex-wrap items-baseline gap-4">
-                  {/* <ProductOptions
+                  <ProductOptions
                     name={name}
                     handleChange={handleChange}
                     values={values}
-                  /> */}
+                  />
                 </div>
               </div>
             );
@@ -125,19 +125,11 @@ export function ProductForm() {
                   data={selectedVariant.priceV2!}
                   as="span"
                 />
-                {isOnSale && (
-                  <Money
-                    withoutTrailingZeros
-                    data={selectedVariant.compareAtPriceV2!}
-                    as="span"
-                    className="opacity-50 strike"
-                  />
-                )}
               </Text>
             )}
           </Button>
         </AddToCartButton>
-        {!isOutOfStock && <ShopPayButton variantIds={[selectedVariant.id!]} />}
+        {/* <ShopPayButton variantIds={[selectedVariant.id!]} /> */}
       </div>
     </form>
   );
